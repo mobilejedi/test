@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<link rel="stylesheet" href="javascript/common/jquery.mobile-1.4.2.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="javascript/common/main.css">
+<script src="javascript/common/jquery-1.10.2.min.js"></script>
+<script src="javascript/common/jquery.mobile-1.4.2.min.js"></script>
+<script type="text/javascript" src="javascript/cardlistfunction.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+
+</head>
+<body>
+
+<div id="menu" data-theme="b">
+	<ul>
+		<li></li>
+		<li></li>
+		<li class="active"><a href="#home" class="contentLink">Menu 1 </a></li>
+		<li><a href="#home" class="contentLink">Menu 2 </a></li>
+		<li><a href="#home" class="contentLink">Menu 3 </a></li>
+		<li><a href="#home" class="contentLink">Menu 4 </a></li>
+	</ul>
+</div>
+
+
+<div data-role="page" id="pageone" data-theme="a">
+
+	<div data-role="header" data-position="fixed" data-add-back-btn="true">
+		<a href="javascript:showMenu()" class="showMenu" onclick="">Menu</a>
+		<h1>Card</h1>	
+	</div>
+	
+
+	
+	<br>
+
+	  <div id="imageList" data-role="listview" align="center">
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  	<br>
+	  	<img src="images/fg1.jpg" width="50" height="50">
+	  </div>
+
+	<script type="text/javascript">
+
+	var startPos;
+	$("img").draggable({
+	    revert: "invalid",
+	    start: function(evt, ui){
+	        startPos = ui.helper.position();
+	    } , zIndex: 100});
+	
+	  $("img").mousedown(function() { 
+		  $(this).fadeTo("slow", 0.33);
+		  });
+	
+	  
+	  $("img").mouseup(function() { 
+		  $(this).fadeTo("slow", 1);
+		  });
+	
+	  
+	  
+	  
+	  
+	</script>
+
+	
+</div>
+</body>
+</html>
